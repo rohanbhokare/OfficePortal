@@ -1,0 +1,22 @@
+[
+    {
+        "Username": "Rohan",
+        "Gender": "male",
+        "DateOfBirth": "1992-04-02",
+        "Password": "password",
+        "KnownAs": "Rohan",
+        "Created": "2019-02-02",
+        "City": "Pune",
+        "Country": "India"
+    },
+    {
+        "Username": "Pravin",
+        "Gender": "male",
+        "DateOfBirth": "1991-05-13",
+        "Password": "password",
+        "KnownAs": "Pravin",
+        "Created": "2019-02-02",
+        "City": "Pune",
+        "Country": "India"
+    }
+]
