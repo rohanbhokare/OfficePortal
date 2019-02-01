@@ -1,0 +1,16 @@
+<div class="container" *ngIf="!loggedIn()">
+    <h1 class="">Omni-Bridge Portal</h1>
+    <div class="row mt-5">
+        <div class="col-md-4 offset-sm-1 offset-md-3 text-center">
+          <form class="form-signin" #loginForm="ngForm" (ngSubmit)=login()>
+              <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+              <label for="inputEmail" class="sr-only">Email address</label>
+              <input type="text" name="username" class="form-control" placeholder="Email address" required autofocus="" [(ngModel)]="model.username">
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" name="password" class="form-control" placeholder="Password" required [(ngModel)]="model.password">
+              <button [disabled]="!loginForm.valid" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+              <p class="mt-5 mb-3 text-muted">© 2019-2020</p>
+          </form>
+        </div>
+    </div>
+</div>
