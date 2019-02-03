@@ -1,0 +1,10 @@
+
+img {
+    max-height: 50px;
+    border: 2px solid white;
+    display: inline;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #fff !important; 
+}

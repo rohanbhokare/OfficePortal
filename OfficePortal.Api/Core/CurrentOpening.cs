@@ -1,4 +1,4 @@
-namespace OfficePortal.Api.Models
+namespace OfficePortal.Api.Core
 {
     public class CurrentOpening
     {

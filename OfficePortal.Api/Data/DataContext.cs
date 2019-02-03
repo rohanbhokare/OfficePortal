@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using OfficePortal.Api.Core;
-using OfficePortal.Api.Models;
+//using OfficePortal.Api.Models;
 
 namespace OfficePortal.Api.Data
 {

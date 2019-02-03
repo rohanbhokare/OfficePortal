@@ -2,34 +2,37 @@
     
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" *ngIf="loggedIn()">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Omni-Bridge Portal</a>
-    <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-        <a class="nav-link" (click)="logout()" >Sign out</a>
-        </li>
-    </ul>
+    
+    <div dropdown *ngIf="loggedIn()" class="dropdown mr-5">
+      <span class="mr-1" > <img src="{{ '../../../../assets/user.png' }}" alt=""> </span>
+      <a dropdownToggle class="dropdown-toggle text-light" (click)="false">
+        Welcome Rohan
+      </a>
+    
+      <div class="dropdown-menu mt-3" *dropdownMenu>
+        <a class="dropdown-item" [routerLink]="['/member/edit']"> <i class="fa fa-user"></i> Edit Profile</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" (click)="logout()"> <i class="fa fa-sign-out"></i> Logout</a>
+      </div>
+    </div>
 </nav>
 <div class="row">
     <nav class="col-md-2 d-none d-md-block bg-light sidebar" *ngIf="loggedIn()">
         <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  Dashboard 
+                <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="active">
+                  <i class=" fa fa-dashboard mr-3"></i> Dashboard 
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Recruitment
+                <a class="nav-link" [routerLink]="['/recruitment']" routerLinkActive="active" >
+                  <i class=" fa fa-vcard mr-3"></i>  Recruitment
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Reports
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Integrations
+                <a class="nav-link" [routerLink]="['/report']" routerLinkActive="active" >
+                  <i class=" fa fa-line-chart mr-3"></i>Reports
                 </a>
               </li>
             </ul>

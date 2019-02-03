@@ -3,6 +3,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './_guards/auth.guard';
+import { RecruitmentComponent } from './recruitment/recruitment.component';
+import { ReportComponent } from './report/report.component';
 
 export const appRoutes: Routes  = [
   {path: '', component: LoginFormComponent},
@@ -11,8 +13,9 @@ export const appRoutes: Routes  = [
         runGuardsAndResolvers: 'always',
         canActivate: [AuthGuard],
         children: [
-            {path: 'dashboard', component: DashboardComponent
-                }
+            {path: 'dashboard', component: DashboardComponent},
+            {path: 'recruitment', component: RecruitmentComponent},
+            {path: 'report', component: ReportComponent}
             // {path: 'members/:id', component: MemberDetailComponent,
             //     resolve: {user: MemberDetailResolver}},
             // {path: 'member/edit', component: MemberEditComponent,

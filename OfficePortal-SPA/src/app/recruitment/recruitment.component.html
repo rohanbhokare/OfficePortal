@@ -1,0 +1,87 @@
+<div class="row  mt-5 mb-3">
+
+  <div class="col-2 offset-10">
+    <button class="btn btn-success" (click)="addCandidateModal()" >Add New Candidate</button>
+  </div>
+</div>
+
+
+
+
+
+<div class="row mb-1">
+  <div class="col-4">
+    <div class="btn-group">
+      <button class="btn btn-outline-info" [(ngModel)]="statusParam" name="statusParam" btnRadio="inprocess" (click)="loadUsers()">In-process</button>
+      <button class="btn btn-outline-info" [(ngModel)]="statusParam" name="statusParam" btnRadio="selected" (click)="loadUsers()">Selected</button>
+      <button class="btn btn-outline-info" [(ngModel)]="statusParam" name="statusParam" btnRadio="onhold" (click)="loadUsers()">On
+        Hold</button>
+      <button class="btn btn-outline-info" [(ngModel)]="statusParam" name="statusParam" btnRadio="rejected" (click)="loadUsers()">Rejected</button>
+    </div>
+  </div>
+  <div class="offset-1">
+    
+    <div class="form-group form-info">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="mr-2 lead">Filter:</span>
+          <select name="" id="" class="form-control">
+            <option value="all">All</option>
+            <option value="dotnet">Dotnet Developer</option>
+            <option value="ui">UI developer</option>
+            <option value="android">Android</option>
+          </select>
+        </div>
+        <input type="text" class="form-control" placeholder="search by name" />
+        <div class="input-group-append">
+          <button class="btn btn-outline-success"><i class="fa fa-refresh"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<table class="table table-striped table-bordered" (click)="alertthis()">
+  <thead class="thead-light table-info">
+    <tr class="">
+      <th width="5%">No</th>
+      <th width="15%">Name</th>
+      <th width="20%">Email</th>
+      <th width="15%">Contact</th>
+      <th width="15%">Position</th>
+      <th width="15%">Status</th>
+      <th width="15%">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr>
+      <td>1</td>
+      <td>Rohan Bhokare</td>
+      <td>rohanbhokare92@gmail.com</td>
+      <td>9423237999</td>
+      <td>Dotnet core developer</td>
+      <td>Selected</td>
+      <td><button>edit</button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Pravin Ghare</td>
+      <td>pravin.g@gmail.com</td>
+      <td>9890048900</td>
+      <td>Dotnet developer</td>
+      <td>Selected</td>
+      <td><button>edit</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<div class="d-flex justify-content-center">
+  <pagination [boundaryLinks]="true" [totalItems]="pagination.totalItems" [(ngModel)]="pagination.currentPage"
+    [itemsPerPage]="pagination.itemPerPage" (pageChanged)="pageChanged($event)" previousText="&lsaquo;" nextText="&rsaquo;"
+    firstText="&laquo;" lastText="&raquo;">
+  </pagination>
+</div>

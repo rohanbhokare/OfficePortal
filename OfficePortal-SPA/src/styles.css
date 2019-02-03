@@ -13,6 +13,11 @@
   
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .tab-panel {
     border: 1px solid #ddd;
     padding: 10px;
@@ -60,9 +65,9 @@
   }
 
 
-  body {
+  /* body {
     font-size: .875rem;
-  }
+  } */
   
   .feather {
     width: 16px;
